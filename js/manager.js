@@ -2,10 +2,10 @@
     if (typeof define === "function" && define.amd) {
         define("UserManager", function (require, exports, module) {
             var $ = require("jquery"),
-            Backbone = require("Backbone"),
+            Backbone = require("backbone"),
             _ = require("underscore");
             //Export to global anyway
-            root.UserManager = factory(root, exports, $);
+            root.UserManager = factory(root, exports, Backbone, $, _);
             return factory(root, exports, Backbone, $, _);
         });
     } else if (typeof exports !== "undefined") {
@@ -20,12 +20,15 @@
 }(this, function(root, UserManager, Backbone, $, _) {
     var instance = null,
     defaultOptions = {
-        url : ""
+        username : "testuser",
+        time : $.now(),
+        uniqueId : _.uniqueId('contact_'),
+        events : Backbone.Events
     }
 
     UserManager = function(options){
         if(instance !== null){
-            throw new Error("Cannot instantiate more than one Singleton, use Singleton.getInstance()");
+            throw new Error("Cannot instantiate more than one Singleton, use UserManager.getInstance()");
         }
         this.options = {};
         this.initialize(options);
