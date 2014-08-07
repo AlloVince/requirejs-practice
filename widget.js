@@ -15,20 +15,16 @@
     }
 }(this, function(root, widget, $) {
     "use strict";
-    var defaultOptions = {
-        url : "" 
-    };
-
-    widget = function(options){
+    widget = function(){
     };
 
     widget.foo = function(){
-        console.log('foo', $.now());
-    }
+        console.log('widget compatible version foo', $.now());
+    };
 
     widget.prototype = {
         bar: function(){
-            console.log('bar', $.now());
+            console.log('widget compatible version bar', $.now());
         }
     };
 
