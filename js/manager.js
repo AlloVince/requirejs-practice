@@ -14,7 +14,7 @@
         _ = require("underscore");
         factory(root, exports, Backbone, $, _);
     } else {
-        root.UserManager = factory(root, {}, root.jQuery, root.Backbone, root._);
+        root.UserManager = factory(root, {}, root.Backbone, root.jQuery, root._);
     }
 
 }(this, function(root, UserManager, Backbone, $, _) {

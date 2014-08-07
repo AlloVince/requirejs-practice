@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <script src="vendor/requirejs/require.js"></script>
+        
+        <script >
+            require.config({
+                shim: {
+                    underscore: {
+                        exports: '_'
+                    },
+                    backbone: {
+                        deps: [
+                            'underscore',
+                            'jquery'
+                        ],
+                        exports: 'Backbone'
+                    }
+                },
+                paths: {
+                    backbone: "vendor/backbone/backbone",
+                    jquery: "vendor/jquery/dist/jquery",
+                    underscore: "vendor/underscore/underscore",
+                    UserManager : 'js/manager'
+                },
+                packages: [
+                ]
+            });
+            require(['UserManager'], function (UserManager) {
+                var um = UserManager.getInstance();
+                console.log(um.getOptions());
+            });
+        </script>
+    </body>
+</html>
+
