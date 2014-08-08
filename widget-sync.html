@@ -10,7 +10,12 @@
     </head>
     <body>
         <p>Hello world! This is HTML5 Boilerplate.</p>
+        <!--[if lt IE 9]>
+        <script src="vendor/jquery-1.11.1/dist/jquery.min.js"></script>
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
         <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <!--<![endif]-->
         <script src="js/widget.js"></script>
         <script>
             widget.foo();

@@ -4,10 +4,9 @@
   "description": "",
   "dependencies": {
     "requirejs": "latest",
-    "require-css": "latest",
-    "requirejs-text": "latest",
     "underscore": "1.5.1",
     "jquery": "latest",
+    "jquery-1.11.1": "1.11.1",
     "backbone": "latest"
   }
 }

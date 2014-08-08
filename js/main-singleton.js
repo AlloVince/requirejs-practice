@@ -13,7 +13,7 @@ require.config({
     },
     paths: {
         backbone: "../vendor/backbone/backbone",
-        jquery: "../vendor/jquery/dist/jquery",
+        jquery: ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) ? "../vendor/jquery/dist/jquery" : "../vendor/jquery-1.11.1/dist/jquery",
         underscore: "../vendor/underscore/underscore",
         UserManager : 'manager'
     },
