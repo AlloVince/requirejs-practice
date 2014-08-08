@@ -6,7 +6,7 @@
             _ = require("underscore");
             //Export to global anyway
             root.UserManager = factory(root, exports, Backbone, $, _);
-            return factory(root, exports, Backbone, $, _);
+            return root.UserManager;
         });
     } else if (typeof exports !== "undefined") {
         var $ = require("jquery"),
